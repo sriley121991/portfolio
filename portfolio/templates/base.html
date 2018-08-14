@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,6 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
 
     {% block title %}<title>Stephan Riley</title>{% endblock %}
   </head>
@@ -19,8 +23,8 @@
 
       <div class="collapse navbar-collapse">
         <div class="navbar-nav">
-          <a href="#" class="nav-item nav-link active">Home</a>
-          <a href="#" class="nav-item nav-link">Projects</a>
+          <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+          <a href="{% url 'projects' %}" class="nav-item nav-link">Projects</a>
           <a href="#" class="nav-item nav-link">Resume</a>
         </div>
       </div>

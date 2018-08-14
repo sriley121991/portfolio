@@ -2,14 +2,20 @@
 {% load static %}
 {% block content %}
   <div class="jumbotron">
-    <h1 class="display-4 text-center">Stephan Riley</h1>
-    <p class="lead text-center">Passionate upcoming developer. Excited about all things programming, but Python is my first love (after my family, of course!).</p>
-    <img src="{% static "img/me_n_squish.jpg" %}" alt="Stephan and Oliver">
+    <div class="text-center">
+      <h1 class="display-4">Stephan Riley</h1>
+    </div>
+    <div class="container">
+      <div class="row align-items-start">
+        <img src="{% static "me-n-squish.jpg" %}" alt="Stephan and Oliver" id="me-n-squish" class="img-fluid col-lg my-auto h-75">
+        <p class="lead col-lg" id="font-changer">Passionate upcoming developer. Excited about all things programming, but Python is my first love (after my family, of course!).</p>
+      </div>
+    </div>
     <hr class="my-4">
     <div class="text-center">
-      <a class="btn btn-dark btn-lg" href="#" role="button">Learn more about me.</a>
-      <a class="btn btn-dark btn-lg" href="#" role="button">Check out some of my Projects.</a>
-      <a class="btn btn-dark btn-lg" href="#" role="button">I live stream. Check out my channel.</a>
+      <a class="btn btn-dark btn-lg m-1" href="{% url 'about-me' %}" role="button">Learn more about me.</a>
+      <a class="btn btn-dark btn-lg m-1" href="{% url 'projects' %}" role="button">Check out my Projects.</a>
+      <a class="btn btn-dark btn-lg m-1" href="#" role="button">Check my Twitch channel.</a>
     </div>
   </div>
 {% endblock content %}
